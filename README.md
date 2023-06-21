@@ -109,6 +109,7 @@ db = SQLAlchemy(metadata=metadata)
 class Owner(db.Model):
     __tablename__ = 'owners'
 
+    
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)
 
@@ -186,7 +187,7 @@ the command line:
 ```console
 $ export FLASK_APP=app.py
 $ export FLASK_RUN_PORT=5555
-$ flask db init
+$  flask db init
 # => /python-p4-flask-sqlalchemy/.venv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py:872: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
 # =>   warnings.warn(FSADeprecationWarning(
 # => /python-p4-flask-sqlalchemy/.venv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py:872: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
